@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <entete/>
     <router-view/>
+    <pied/>
   </div>
 </template>
+
+<script>
+import entete from './components/header/Header.vue'
+import pied from './components/footer/Footer.vue'
+
+export default {
+  name : 'app',
+  components:
+    entete,
+    pied,
+  
+}
+</script>
+
 
 <style>
 #app {
