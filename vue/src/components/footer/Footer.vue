@@ -1,13 +1,11 @@
 <template>
-    <div></div>
-
+    <div>Footer</div>
 </template>
 
 <script>
 export default {
 name: 'pied',
 props: {
-    
 }
 }
 </script>

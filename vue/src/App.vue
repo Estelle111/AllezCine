@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <entete/>
-    <router-view/>
+      <router-view/> 
+      <h1>App</h1>
     <pied/>
   </div>
 </template>
@@ -12,10 +13,10 @@ import pied from './components/footer/Footer.vue'
 
 export default {
   name : 'app',
-  components:
+  components:{
     entete,
     pied,
-  
+  }
 }
 </script>
 
