@@ -1,16 +1,16 @@
 <template>
-  <div id="header">
-    <div id="nav">
-      <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
-      <router-link to="/">Home</router-link> 
-      <router-link to="/Films">Films</router-link>
-      <router-link to="/Series">Series</router-link>
-      <router-link to="/Descriptions">Descriptions</router-link>
+    <div id="header">
+        <div id="nav">
+            <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
+            <router-link to="/">Home</router-link> 
+            <router-link to="/Films">Films</router-link>
+            <router-link to="/Series">Series</router-link>
+            <router-link to="/Descriptions">Descriptions</router-link>
+        </div>
+        <div>
+            <CarouselView/>
+        </div>    
     </div>
-      <div>
-        <CarouselView/>
-      </div>    
-  </div>
 </template>
 
 <script>

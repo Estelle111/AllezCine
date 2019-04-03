@@ -1,3 +1,22 @@
 <template>
-    <h1>Descriptions</h1>
+    <div class="descriptions">
+        descriptions
+    </div>
 </template>
+
+<script>
+
+export default {
+  name : 'Descriptions',
+  components:{
+  },
+}
+
+</script>
+
+<style>
+  .descriptions {
+    background-color: yellow;
+  }
+</style>
+

@@ -1,15 +1,11 @@
 <template>
-    <div id="btn">
-        <button> {{ text }} </button>
-    </div>
+    <button> {{ text }} </button>
 </template>
 
 <script>
 export default {
-    name:'btn',
-    props: ['text'],
-
-    
+    name:'Btn',
+    props: ['text'],  
 }
 </script>
 

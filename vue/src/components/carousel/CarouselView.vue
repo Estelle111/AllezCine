@@ -1,16 +1,11 @@
 <template>
-    <div id="nav">
-        <Carousel :per-page="1" :mouse-drag="true">
-            <Slide v-for="(slide, index) in lists" :key="index">
-                Slide {{ slide }} Content
-                <br/> 
-                <btn :text="'GO TO THE FILM'" />
-            </Slide>
-        </Carousel> 
-        
-        
-    </div>
-    
+    <Carousel :per-page="1" :mouse-drag="true">
+        <Slide v-for="(slide, index) in lists" :key="index">
+            Slide {{ slide }} Content
+            <br/> 
+            <Btn :text="'GO TO THE FILM'" />
+        </Slide>
+    </Carousel> 
 </template>
 
 <script>

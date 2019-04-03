@@ -21,17 +21,17 @@ export default new Router({
       component: Home
     },
     {
-      path: '/',
+      path: '/Films',
       name: 'Films',
       component : Films
     },
     {
-      path: '/',
+      path: '/Series',
       name: 'Series',
       component : Series
     },
     {
-      path: '/',
+      path: '/Descriptions',
       name: 'Descriptions',
       component : Descriptions
     },

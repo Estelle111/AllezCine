@@ -1,11 +1,10 @@
 <template>
-    <div>{{ text }}</div>
+    <img>
 </template>
 
 <script>
 export default {
-  name: 'Title',
-  props: ['text'],
+  name: 'SocialNetwork',
 }
 </script>
 
