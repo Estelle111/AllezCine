@@ -3,10 +3,9 @@
         <Carousel :per-page="1" :mouse-drag="true">
             <Slide v-for="(slide, index) in lists" :key="index">
                 Slide {{ slide }} Content
-                <br /> 
-                <btn/>
+                <br/> 
+                <btn :text="'GO TO THE FILM'" />
             </Slide>
-            
         </Carousel> 
         
         
@@ -20,9 +19,7 @@ import Btn from '../btn/Btn.vue'
 
 export default {
     name: 'CarouselView',
-    props: {
-    
-    },
+    props: [],
     data(){
         return {
             lists:['test1', 'test2', 'test3']

@@ -1,21 +1,21 @@
 <template>
     <div id="btn">
-        <Header/>
-        <p> btn </p>
-        <Footer/>
+        <button> {{ text }} </button>
     </div>
 </template>
 
 <script>
 export default {
-    name:'btn'
+    name:'btn',
+    props: ['text'],
+
     
 }
 </script>
 
 <style>
 
-#btn {
+button {
 background-color: red;
 border: none;
 color: white;
