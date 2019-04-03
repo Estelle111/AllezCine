@@ -1,13 +1,13 @@
 <template>
-    <div>Title</div>
+    <div>
+        <div>{{ text }}</div>
+    </div>
 </template>
 
 <script>
 export default {
   name: 'Title',
-  props: {
-    
-  }
+  props: ['text'],
 }
 </script>
 

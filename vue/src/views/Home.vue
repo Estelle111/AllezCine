@@ -1,15 +1,35 @@
 <template>
   <div class="home">
-    <router-view/>
-    <div>Home</div>
+    <div>
+        <Title :text="'Films'"/>
+        <ImgFilm/>
+        <button></button>
+    </div>
+    <div>
+        <Title :text="'Séries TV'"/>
+        <ImgSerie/>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import Title from '../components/title/Title.vue'
+import ImgFilm from '../components/imgFilm/ImgFilm.vue'
+import ImgSerie from '../components/imgSerie/ImgSerie.vue'
 
 export default {
   name : 'Home',
+  components:{
+    Title,
+    ImgFilm,
+    ImgSerie
+  },
 }
 
 </script>
+
+<style>
+  .home {
+    background-color: pink;
+  }
+</style>
