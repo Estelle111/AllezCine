@@ -6,11 +6,6 @@ import Films from './views/Films.vue'
 import Series from './views/Series.vue'
 import Descriptions from './views/Descriptions.vue'
 
-//Components
-import Header from './components/header/Header.vue'
-import Footer from './components/footer/Footer.vue'
-
-
 
 
 Vue.use(Router)
@@ -40,15 +35,5 @@ export default new Router({
       name: 'Descriptions',
       component : Descriptions
     },
-    {
-      path: '/',
-      name: 'Header',
-      component : Header
-    },
-    {
-      path: '/',
-      name: 'Footer',
-      component : Footer
-    }
   ]
 })

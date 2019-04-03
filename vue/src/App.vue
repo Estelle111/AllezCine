@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <entete/>
-      <router-view/> 
-      <h1>App</h1>
-    <pied/>
+    <Header/>
+    <router-view/> 
+    <h1>App</h1>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import entete from './components/header/Header.vue'
-import pied from './components/footer/Footer.vue'
+import Header from './components/header/Header.vue'
+import Footer from './components/footer/Footer.vue'
 
 export default {
   name : 'app',
   components:{
-    entete,
-    pied,
+    Header,
+    Footer,
   }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <entete/>
     <router-view/>
     <div>Home</div>
   </div>
