@@ -2,7 +2,7 @@
     <Carousel :per-page="1" :mouse-drag="true">
         <Slide v-for="(slide, index) in lists" :key="index">
             Slide {{ slide }} Content
-            <br/> 
+            <br/>
             <Btn :text="'GO TO THE FILM'" />
         </Slide>
     </Carousel> 

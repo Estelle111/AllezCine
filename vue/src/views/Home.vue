@@ -1,26 +1,14 @@
 <template>
     <div class="home">
         <div>
-            <div>
-                <Title :text="'Films'"/>
-            </div>
-            <div>
-                <ImgFilm/>
-            </div>
-            <div>
-                <Btn :text="'more films'"></Btn>
-            </div>
+            <Title :text="'Films'"/>
+            <ImgFilm/>
+            <Btn :text="'more films'"></Btn>
         </div>
         <div>
-            <div>
-                <Title :text="'TV Series'"/>
-            </div>
-            <div>
-                <ImgSerie/>
-            </div>
-            <div>
-                <Btn :text="'more series'"></Btn>
-            </div>
+            <Title :text="'TV Series'"/>
+            <ImgSerie/>
+            <Btn :text="'more series'"></Btn>
         </div>
     </div>
 </template>

@@ -10,10 +10,10 @@ export default {
 </script>
 
 <style>
-
 button {
 background-color: red;
-border: none;
+border: 1px hidden red;
+border-radius: 5px;;
 color: white;
 padding: 0px 55px;
 text-align: center;

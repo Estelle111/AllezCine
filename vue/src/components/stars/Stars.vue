@@ -1,11 +1,11 @@
 <template>
-    <div class="imgFilm"></div>
+    <div class="stars">Stars</div>
 </template>
 
 <script>
 export default {
-  name: 'ImgFilm',
-  props: []
+  name: 'Stars',
+  props: [],
 }
 </script>
 

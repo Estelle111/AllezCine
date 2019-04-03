@@ -1,14 +1,8 @@
 <template>
     <div class="films">
-        <div>
-            <Title :text="'Top films'"/>
-        </div>
-        <div>
-            <ImgFilm/>
-        </div>
-        <div>
-            <SocialNetwork/>
-        </div>
+        <Title :text="'Top films'"/>
+        <ImgFilm/>
+        <SocialNetwork/>
     </div>
 </template>
 
