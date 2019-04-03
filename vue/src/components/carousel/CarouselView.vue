@@ -3,13 +3,20 @@
         <Carousel :per-page="1" :mouse-drag="true">
             <Slide v-for="(slide, index) in lists" :key="index">
                 Slide {{ slide }} Content
+                <br /> 
+                <btn/>
             </Slide>
-        </Carousel>  
+            
+        </Carousel> 
+        
+        
     </div>
+    
 </template>
 
 <script>
 import { Carousel, Slide } from 'vue-carousel'
+import Btn from '../btn/Btn.vue'
 
 export default {
     name: 'CarouselView',
@@ -23,16 +30,19 @@ export default {
     },
     components:{
         Carousel,
-        Slide
+        Slide,
+        Btn
     }
 }
 </script>
 
 <style>
+.VueCarousel {
+    background-color: green;
+
+}
 .example-slide {
     align-items: center;
-    background-color: #666;
-    color: #999;
     display: flex;
     font-size: 1.5rem;
     justify-content: center;

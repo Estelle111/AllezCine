@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-//pages
+//centralisation des pages pour pouvoir passer d un enfant a un parent
 import Home from './views/Home.vue'
 import Films from './views/Films.vue'
 import Series from './views/Series.vue'
