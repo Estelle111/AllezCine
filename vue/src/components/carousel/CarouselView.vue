@@ -1,34 +1,44 @@
 <template>
     <div id="nav">
+
         <Carousel :per-page="1" :mouse-drag="true">
             <Slide v-for="(slide, index) in lists" :key="index">
                 Slide {{ slide }} Content
-                <br/> 
-                <btn :text="'GO TO THE FILM'" />
+                <!-- affichage et deffinition des proprietes du component btn -->
+                <Btn :text="'GO TO THE FILM'" />
             </Slide>
-        </Carousel> 
-        
-        
+        </Carousel>  
+
+
     </div>
-    
+
 </template>
 
 <script>
+//import des component carousel et slide du npm telechage 'carousel'
 import { Carousel, Slide } from 'vue-carousel'
+//import du component Btn
 import Btn from '../btn/Btn.vue'
+
+
 
 export default {
     name: 'CarouselView',
-    props: [],
+    props: [
+
+    ],
+    //data ou ; "ce qu il contient"
     data(){
         return {
             lists:['test1', 'test2', 'test3']
         }
     },
+    // ses components sont; 
     components:{
         Carousel,
         Slide,
-        Btn
+        Btn,
+        
     }
 }
 </script>
