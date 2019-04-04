@@ -9,21 +9,30 @@
 </template>
 
 <script>
+//import des component carousel et slide du npm telechage 'carousel'
 import { Carousel, Slide } from 'vue-carousel'
+//import du component Btn
 import Btn from '../btn/Btn.vue'
+
+
 
 export default {
     name: 'CarouselView',
-    props: [],
+    props: [
+
+    ],
+    //data ou ; "ce qu il contient"
     data(){
         return {
             lists:['test1', 'test2', 'test3']
         }
     },
+    // ses components sont; 
     components:{
         Carousel,
         Slide,
-        Btn
+        Btn,
+        
     }
 }
 </script>

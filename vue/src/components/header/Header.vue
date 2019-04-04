@@ -14,13 +14,17 @@
 </template>
 
 <script>
+
 import CarouselView from '../carousel/CarouselView.vue'
+//import du component Recherche
+import Recherche from '../recherche/Recherche.vue'
 
 export default {
   name: 'Header',
 
   components: {
     CarouselView,
+    Recherche
   }
 }
 </script>

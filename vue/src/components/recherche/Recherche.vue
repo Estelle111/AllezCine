@@ -1,0 +1,27 @@
+<template>
+    <div id="recherche">
+        <!-- creer le mom du component input/Recherche -->
+        <input type="search" v-model="search"
+        placeholder="Recherche dans le site">
+        
+    </div>
+</template>
+
+<script>
+
+
+
+export default {
+    name : 'Recherche',
+    props: ['text'],
+    conponents:{
+    
+    }
+}
+</script>
+
+<style>
+
+</style>
+
+
