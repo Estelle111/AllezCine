@@ -11,6 +11,7 @@ import Title from '../components/title/Title'
 import ImgFilm from '../components/imgFilm/ImgFilm'
 import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
+
 export default {
   name : 'Films',
   components:{
@@ -19,7 +20,6 @@ export default {
     SocialNetwork,
   },
 }
-
 </script>
 
 <style>
