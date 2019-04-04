@@ -7,6 +7,7 @@
             <router-link to="/Series">Series</router-link>
             <router-link to="/Descriptions">Descriptions</router-link>
         </div>
+        <Recherche/>
         <div>
             <CarouselView/>
         </div>    
