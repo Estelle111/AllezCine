@@ -40,6 +40,11 @@ export default {
 <style>
 .VueCarousel {
     background-color: green;
+    width : 95%;
+    margin-left : auto ; 
+    margin-right : auto ; 
+    padding : 20px ;
+    height : 300px;
 
 }
 .example-slide {

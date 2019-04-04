@@ -20,7 +20,9 @@ export default {
 </script>
 
 <style>
-
+#recherche {
+    float : right ; 
+}
 </style>
 
 
