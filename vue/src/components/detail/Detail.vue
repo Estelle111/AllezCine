@@ -1,17 +1,17 @@
 <template>
     <div class="detail">
         Detail
-        <!-- <Stars/> -->
+        <Stars/>
     </div>
 </template>
 
 <script>
-/* import Stars from '../components/stars/Stars' */
+import Stars from '../stars/Stars.vue'
 
 export default {
   name: 'Detail',
   components: {
-    /* Stars, */
+    Stars,
   },
 }
 </script>
