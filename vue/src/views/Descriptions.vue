@@ -6,6 +6,10 @@
             <Form/>
             <Comment/>
         </div>
+        <div>
+            <Title :text="'More films'"/>
+            <ImgFilm/>
+        </div>
     </div>
 </template>
 
@@ -14,6 +18,8 @@ import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 import Detail from '../components/detail/Detail'
 import Form from '../components/form/Form'
 import Comment from '../components/comment/Comment'
+import Title from '../components/title/Title'
+import ImgFilm from '../components/imgFilm/ImgFilm'
 
 export default {
   name : 'Descriptions',
@@ -21,7 +27,9 @@ export default {
     SocialNetwork,
     Detail,
     Form,
-    Comment
+    Comment,
+    Title,
+    ImgFilm
   },
 }
 </script>
