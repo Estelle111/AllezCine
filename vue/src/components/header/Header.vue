@@ -8,7 +8,7 @@
             <router-link to="/Descriptions">Descriptions</router-link>
         </div>
         <Recherche/>
-        <div>
+        <div id="headeroussel">
             <CarouselView/>
         </div>    
     </div>
@@ -33,7 +33,20 @@ export default {
 
 <style>
 #header {
-  background-color:yellow;
+ background-color:yellow;
+  width : 90% ; 
+  margin : auto ;
+  font-size: 20px;
 }
-
+#nav {
+  
+  float : left ; 
+  margin:0 10px; 
+  
+}
+#headeroussel {
+  
+  color : blue ;
+  
+}
 </style>
