@@ -31,7 +31,7 @@ export default new Router({
       component : Series
     },
     {
-      path: '/Descriptions',
+      path: '/Descriptions/:type/:id',
       name: 'Descriptions',
       component : Descriptions
     },
