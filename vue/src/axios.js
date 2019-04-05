@@ -8,4 +8,4 @@ export default {
 install (Vue, options) {
 Vue.prototype.$axios = axios_http
 }
-};
+}
