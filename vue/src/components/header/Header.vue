@@ -5,7 +5,6 @@
             <router-link to="/" id="BarMot">Home</router-link> 
             <router-link to="/Films" id="BarMot">Films</router-link>
             <router-link to="/Series" id="BarMot">Series</router-link>
-            <router-link to="/Descriptions" id="BarMot">Descriptions</router-link>
         </div>
         <Recherche/>
         <div id="headeroussel">
