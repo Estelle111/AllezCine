@@ -54,11 +54,37 @@ export default {
 #headeroussel {
   
   color : blue ;
+  text-align: center;
   
 }
 .BarMot {
   margin-left :50px ; 
   color : white ; 
   text-decoration: none ; 
+}
+
+
+
+@media screen and (max-width: 650px) {
+.BarMot {
+    width: 100%;
+    font-size: 18px;
+    margin-left: 17px ;
+}
+#appBar {
+  background-color : #2a2a2a ; 
+  height : 80px ;
+  display : block ; 
+  align-items: left ; 
+}
+#nav {
+  
+  float : left ; 
+  margin:0px 0px 0px 0px; 
+}
+élément {
+    margin-left: 00px;
+}
+
 }
 </style>

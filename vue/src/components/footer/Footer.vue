@@ -1,6 +1,9 @@
 <template>
 
 <div id="footer" >
+    <div class="FooterH1 fontUno">
+        <h2 class="colored ALLEZCINE">ALLEZ</h2><h2 class="ALLEZCINE colorwhite">CINE</h2>
+    </div>
     <div class="footer fontUno">
         <div class="rowAll">
             <h2 class="FooterH2">Les FONDAMENTAUX</h2>
@@ -52,7 +55,7 @@ box-sizing: border-box;
 float: left;
 width: 33.33%;
 padding: 10px;
- height: 230px; /* Should be removed. Only for demonstration */
+height: 300px; /* Should be removed. Only for demonstration */
 
 }
 
@@ -63,21 +66,42 @@ display: table;
 clear: both;
 
 }
+#footer {
+background-color: #2a2a2a;
+}
 .footer{
 background-color: #2a2a2a;
 color : white ; 
 text-decoration: none ;
+text-align: center;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
-  .rowAll {
-    width: 100%;
-  }
-}
 .Footermot {
 text-decoration: none ;
 color : white ;  
+}
+.ALLEZCINE {
+display: inline;
+font-size : 50px; 
+}
+.FooterH1 {
+margin-left : 200px ; 
+}
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+.rowAll {
+    width: 100%;
+    height: 200px;
+}
+.FooterH1 {
+margin-left : 20px ; 
+}
+.FooterH2 {
+margin: 0px 0px 0px 0px ;
+}
 }
 
 /*
