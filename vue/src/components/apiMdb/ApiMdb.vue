@@ -1,7 +1,7 @@
 <template>
     <div class="apiMdb">
-		<router-link :to="`/Descriptions/${content.title ? 'film' : 'serie'}/${content.id}`">
-			<div class="tv">
+		<router-link :to="`/Descriptions/${content.title ? 'movie' : 'tv'}/${content.id}`">
+			<div class="apiMdb">
 				<img class="poster" :src="getImage(content.poster_path)" alt="image"> <br/>
 				<span v-if="content.title">
 					{{content.title}}<br/>

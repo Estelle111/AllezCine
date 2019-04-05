@@ -6,7 +6,6 @@
         <router-link to="/" class="BarMot colored">HOME</router-link> 
         <router-link to="/Films" class="BarMot">Films</router-link>
         <router-link to="/Series" class="BarMot">Series</router-link>
-        <router-link to="/Descriptions" class="BarMot">Descriptions</router-link>
       </div>
       <Recherche/>
     </div>
