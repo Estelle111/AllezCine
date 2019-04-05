@@ -1,7 +1,7 @@
 <template>
     <div id="recherche">
-        <!-- creer le mom du component input/Recherche -->
-        <input type="search" v-model="search"
+        <!--creer le mom du component input/Recherche -->
+         <input type="search" v-model="search"
         placeholder="Recherche dans le site">
         
     </div>
@@ -15,6 +15,11 @@ export default {
     name : 'Recherche',
     props: ['text'],
     conponents:{
+    },
+    data (){
+        return {
+            search: null,
+        }
     }
 }
 </script>

@@ -1,8 +1,14 @@
 <template>
     <div class="imgSerie">
-        <div class="serieImg"></div>
-        <div class="serieTitle">{{info}}</div>
-        <div class="serieDate"></div>
+        <div>{{tv}}</div>
+        <br/><br/><br/>
+        <div v-for="(el, index) in tv" :key="index">
+            <div class="tv">
+                {{el.poster_path}}<br/>
+                {{el.name}}<br/>
+                {{el.first_air_date}}<br/>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -13,7 +19,7 @@ export default {
   name: 'ImgSerie',
   data () {
     return {
-      info: null,
+      tv: null,
       loading: true,
       errored: false
     }
@@ -22,8 +28,7 @@ export default {
     axios
       .get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
       .then(response => {
-        console.log(response)
-        this.info = response.data
+        this.tv = response.data.results
       })
       .catch(error => {
         console.log(error)
