@@ -2,13 +2,13 @@
     <div id="header">
         <div id="nav">
             <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
-            <router-link to="/">Home</router-link> 
-            <router-link to="/Films">Films</router-link>
-            <router-link to="/Series">Series</router-link>
-            <router-link to="/Descriptions">Descriptions</router-link>
+            <router-link to="/" id="BarMot">Home</router-link> 
+            <router-link to="/Films" id="BarMot">Films</router-link>
+            <router-link to="/Series" id="BarMot">Series</router-link>
+            <router-link to="/Descriptions" id="BarMot">Descriptions</router-link>
         </div>
         <Recherche/>
-        <div>
+        <div id="headeroussel">
             <CarouselView/>
         </div>    
     </div>
@@ -33,7 +33,23 @@ export default {
 
 <style>
 #header {
-  background-color:yellow;
+background-color:yellow;
+  width : 90% ; 
+  margin : auto ;
+  font-size: 20px;
 }
-
+#nav {
+  
+  float : left ; 
+  margin:0 10px; 
+  
+}
+#headeroussel {
+  
+  color : blue ;
+  
+}
+#BarMot {
+  padding :0, 20px ; 
+}
 </style>
