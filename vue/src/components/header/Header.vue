@@ -69,8 +69,8 @@ export default {
 @media screen and (max-width: 650px) {
 .BarMot {
     width: 100%;
-    font-size: 16px;
-    margin-left: 20px ;
+    font-size: 18px;
+    margin-left: 17px ;
 }
 #appBar {
   background-color : #2a2a2a ; 

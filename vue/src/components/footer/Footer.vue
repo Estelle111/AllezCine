@@ -88,13 +88,19 @@ font-size : 50px;
 margin-left : 200px ; 
 }
 
+
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 650px) {
 .rowAll {
     width: 100%;
+    height: 200px;
 }
 .FooterH1 {
 margin-left : 20px ; 
+}
+.FooterH2 {
+margin: 0px 0px 0px 0px ;
 }
 }
 
