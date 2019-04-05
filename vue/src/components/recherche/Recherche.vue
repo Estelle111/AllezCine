@@ -26,7 +26,8 @@ export default {
 
 <style>
 #recherche {
-    float : right ; 
+    float : right ;
+    margin-right: 30px ;  
 }
 </style>
 

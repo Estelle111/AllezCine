@@ -14,26 +14,26 @@
 import { axios } from '../../axios'
 
 export default {
-  name: 'ImgFilm',
-  data(){
+name: 'ImgFilm',
+data(){
     return{
         moovie: null,
         loading: true,
         errored: false
-      }
-  },
-  mounted () {
+    }
+},
+mounted () {
     axios
-      .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-      .then(response => {
+    .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+    .then(response => {
         this.moovie = response.data.results.slice(0, 4)
-      })
-      .catch(error => {
+    })
+    .catch(error => {
         console.log(error)
         this.errored = true
-      })
-      .finally(() => this.loading = false)    
-  }
+    })
+    .finally(() => this.loading = false)    
+}
 }
 </script>
 

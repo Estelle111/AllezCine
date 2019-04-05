@@ -8,7 +8,7 @@
         </div>
         <div>
             <Title :text="'More films'"/>
-            <ImgFilm/>
+            <ApiMdb/>
         </div>
     </div>
 </template>
@@ -19,7 +19,7 @@ import Detail from '../components/detail/Detail'
 import Form from '../components/form/Form'
 import Comment from '../components/comment/Comment'
 import Title from '../components/title/Title'
-import ImgFilm from '../components/imgFilm/ImgFilm'
+import ApiMdb from '../components/apiMdb/ApiMdb'
 
 export default {
   name : 'Descriptions',
@@ -29,7 +29,7 @@ export default {
     Form,
     Comment,
     Title,
-    ImgFilm
+    ApiMdb
   },
 }
 </script>

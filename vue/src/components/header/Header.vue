@@ -1,17 +1,19 @@
 <template>
-    <div id="header">
-        <div id="nav">
-            <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
-            <router-link to="/" id="BarMot">Home</router-link> 
-            <router-link to="/Films" id="BarMot">Films</router-link>
-            <router-link to="/Series" id="BarMot">Series</router-link>
-            <router-link to="/Descriptions" id="BarMot">Descriptions</router-link>
-        </div>
-        <Recherche/>
-        <div id="headeroussel">
-            <CarouselView/>
-        </div>    
+  <div id="header">
+    <div id="appBar">
+      <div id="nav" class="fontUno" >
+        <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
+        <router-link to="/" class="BarMot colored">HOME</router-link> 
+        <router-link to="/Films" class="BarMot">Films</router-link>
+        <router-link to="/Series" class="BarMot">Series</router-link>
+        <router-link to="/Descriptions" class="BarMot">Descriptions</router-link>
+      </div>
+      <Recherche/>
     </div>
+    <div id="headeroussel">
+        <CarouselView/>
+    </div> 
+  </div>
 </template>
 
 <script>
@@ -33,8 +35,7 @@ export default {
 
 <style>
 #header {
-background-color:yellow;
-  width : 90% ; 
+  background-color:yellow;
   margin : auto ;
   font-size: 20px;
 }
@@ -42,14 +43,23 @@ background-color:yellow;
   
   float : left ; 
   margin:0 10px; 
-  
+}
+#appBar {
+  background-color : #2a2a2a ; 
+  height : 80px ;
+  display : flex ; 
+  align-items: center ; 
+  justify-content: space-between ; 
+
 }
 #headeroussel {
   
   color : blue ;
   
 }
-#BarMot {
-  padding :0, 20px ; 
+.BarMot {
+  margin-left :50px ; 
+  color : white ; 
+  text-decoration: none ; 
 }
 </style>
