@@ -71,7 +71,7 @@ export default {
 <style>
 	.home {
 		background-color: pink;
-	  }
+	}
 	.contents{
 		display: flex;
 		justify-content: flex-start;

@@ -6,9 +6,8 @@
 
 
 export default {
-  name: 'Title',
-  props: ['text'],
-  
+	name: 'Title',
+	props: ['text'],
 }
 </script>
 

@@ -22,11 +22,11 @@ export default {
         SocialNetwork,
     },
     data () {
-    return {
-      tv: null,
-      loading: true,
-      errored: false
-    }
+        return {
+            tv: null,
+            loading: true,
+            errored: false
+        }
   },
   mounted () {   
 	// get series api
@@ -48,6 +48,6 @@ export default {
 
 <style>
     .series {
-    background-color: rgb(87, 255, 138);
+        background-color: rgb(87, 255, 138);
     }
 </style>

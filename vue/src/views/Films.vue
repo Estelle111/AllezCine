@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style>
-  .films {
-    background-color: orange;
-  }
+	.films {
+		background-color: orange;
+	}
 </style>

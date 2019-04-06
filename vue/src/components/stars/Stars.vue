@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  name: 'Stars',
-  props: [],
+	name: 'Stars',
+	props: [],
 }
 </script>
 
