@@ -16,33 +16,33 @@ import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
 
 export default {
-  name : 'Films',
-  components:{
-    Title,
-    ApiMdb,
-    SocialNetwork,
-  },
-  data () {
-    return {
-      films: null,
-      loading: true,
-      errored: false
-    }
-  },
-  mounted () {
+	name : 'Films',
+	components:{
+		Title,
+		ApiMdb,
+		SocialNetwork,
+	},
+	data () {
+		return {
+			films: null,
+			loading: true,
+			errored: false
+		}
+	},
+	mounted () {
 	// get film api
-	axios
-      .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-      .then(response => {
-		this.films = response.data.results
-		console.log(this.films)
-      })
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)    
-  }
+		axios
+			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+			.then(response => {
+			this.films = response.data.results
+			console.log(this.films)
+			})
+			.catch(error => {
+			console.log(error)
+			this.errored = true
+			})
+			.finally(() => this.loading = false)    
+	}
 }
 </script>
 

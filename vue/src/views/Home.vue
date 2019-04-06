@@ -24,46 +24,46 @@ import ApiMdb from '../components/apiMdb/ApiMdb.vue'
 import Btn from '../components/btn/Btn.vue'
 
 export default {
-  name : 'Home',
-  components:{
-    Title,
-    ApiMdb,
-    Btn
-  },
-  data () {
-    return {
-      tv: null,
-      films: null,
-      loading: true,
-      errored: false
-    }
-  },
-  mounted () {
+	name : 'Home',
+	components:{
+		Title,
+		ApiMdb,
+		Btn
+	},
+	data () {
+		return {
+			tv: null,
+			films: null,
+			loading: true,
+			errored: false
+		}
+	},
+	mounted () {
 	// get film api
-	axios
-      .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-      .then(response => {
-		this.films = response.data.results.slice(0, 12)
-		console.log(this.films)
-      })
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)    
-	// get series api
-	axios
-		.get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-		.then(response => {
-			this.tv = response.data.results.slice(0, 12)
-			console.log(this.tv)
-		})
-		.catch(error => {
+		axios
+			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+			.then(response => {
+			this.films = response.data.results.slice(0, 12)
+			console.log(this.films)
+			})
+			.catch(error => {
 			console.log(error)
 			this.errored = true
-		})
-		.finally(() => this.loading = false)
-  }
+			})
+			.finally(() => this.loading = false)    
+		// get series api
+		axios
+			.get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+			.then(response => {
+				this.tv = response.data.results.slice(0, 12)
+				console.log(this.tv)
+			})
+			.catch(error => {
+				console.log(error)
+				this.errored = true
+			})
+			.finally(() => this.loading = false)
+	}
 }
 
 </script>

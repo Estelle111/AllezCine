@@ -2,15 +2,15 @@
     <div class="descriptions">
         <SocialNetwork/>
         <div>
-            <Detail/>
+			<Detail/>
             <Form/>
             <Comment/>
         </div>
         <div>
-            <Title :text="'More films'"/>
-           <div>
-			   {{content.budget}}
-           </div>
+        	<Title :text="'More films'"/>
+           	<div class="contents">
+        		<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
+			</div>
         </div>
     </div>
 </template>
@@ -25,45 +25,39 @@ import Title from '../components/title/Title'
 import ApiMdb from '../components/apiMdb/ApiMdb'
 
 export default {
-  name : 'Descriptions',
-  components:{
-    SocialNetwork,
-    Detail,
-    Form,
-    Comment,
-    Title,
-    ApiMdb
-  },
-  data () {
-    return {
-      content: null,
-      loading: true,
-      errored: false
-    }
-  },
-  mounted () {
-	// get film api
-	console.log(this.$router)
-	console.log(this.$router.history.current.params.id)
-	console.log(this.$router.history.current.params.type)
-	axios
-	  .get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
-      .then(response => {
-		this.content = response.data
-		console.log(this.content)
-      })
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)    
-  }
+	name : 'Descriptions',
+	components:{
+		SocialNetwork,
+		Detail,
+		Form,
+		Comment,
+		Title,
+		ApiMdb
+	},
+	data () {
+		return {
+			films: null,
+			loading: true,
+			errored: false
+		}
+  	},
+	mounted () {
+		// get film api
+		axios
+			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+			.then(response => {
+			this.films = response.data.results.slice(0, 6)
+			console.log(this.films)
+			})
+			.catch(error => {
+			console.log(error)
+			this.errored = true
+			})
+			.finally(() => this.loading = false) 
+	}
 }
 </script>
 
 <style>
-  .descriptions {
-    background-color: skyblue;
-  }
 </style>
 
