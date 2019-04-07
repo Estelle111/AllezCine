@@ -16,13 +16,15 @@
 				</span>
 				<Stars/>
 			</span>
-			<span class="overview">
+			<span class="overview marge">
 				<h3>Synopsis</h3>
 				{{detail.overview}}
 			</span>
-			<span v-for="(genre, index) in genres" :key="index" class="genres">
-				{{genre.name}}
-			</span>
+			<div class="genres marge">
+				<span v-for="(genre, index) in genres" :key="index" class="genre">
+					{{genre.name}}
+				</span>
+			</div>
 		</div>
     </div>
 </template>
@@ -83,4 +85,42 @@ export default {
 </script>
 
 <style>
+	.details {
+		display: flex;
+		justify-content: space-between;
+	}
+	.imgDetail {
+		height: 400px;
+		margin-right: 50px;
+    }
+    .textDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .marge {
+        margin-bottom: 50px;
+    }
+    .firstSpan {
+        display: flex;
+        justify-content: space-between;
+    }
+    .titleDetail {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .genres {
+		display: flex;
+		flex-wrap: wrap;
+    }
+    .genre {
+        background-color: white;
+        margin-right: 10px;
+        padding: 6px;
+        height: 35px;
+        width: 115px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0px 8px 6px grey; */
+    }
 </style>

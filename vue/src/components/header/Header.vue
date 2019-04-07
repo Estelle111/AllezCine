@@ -4,8 +4,8 @@
 			<div id="nav" class="fontUno" >
 				<!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
 				<router-link to="/" class="BarMot colored">HOME</router-link> 
-				<router-link to="/Films" class="BarMot">Films</router-link>
-				<router-link to="/Series" class="BarMot">Series</router-link>
+				<router-link to="/Films" class="BarMot">Films populaires</router-link>
+				<router-link to="/Series" class="BarMot">Séries Tv</router-link>
 			</div>
 			<Recherche/>
 		</div>
@@ -33,8 +33,6 @@ export default {
 
 <style>
 #header {
-	background-color:yellow;
-	margin: auto;
 	font-size: 20px;
 }
 #nav {

@@ -5,40 +5,5 @@
     color : white ;    
 }
 .fontUno{
-    font-family: 'Baloo Chettan', cursive;
+    font-family: 'Noto Sans', sans-serif;
 }
-
-
-/* PAGE DESCRIPTIONS */
-.descriptions {
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-}
-    /* component Detail */
-    .details {
-		margin: 10% 15% 10% 15%;
-		display: flex;
-		justify-content: space-between;
-	}
-	.imgDetail {
-		height: 400px;
-		margin-right: 50px;
-    }
-    .textDetail {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .firstSpan {
-        display: flex;
-        justify-content: space-between;
-    }
-    .titleDetail {
-        font-size: 25px;
-        font-weight: bold;
-    }
-    .genres {
-        border: 1px solid grey;
-        background-color: white;
-    }

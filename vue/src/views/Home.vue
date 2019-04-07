@@ -1,18 +1,22 @@
 <template>
     <div class="home">
-        <div>
-            <Title :text="'Films'"/>
+        <div class="homeFilm">
+            <Title class="homeTitle" :text="'Films'"/>
 			<div class="contents">
 				<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
 			</div>
-            <Btn :text="'more films'"></Btn>
+			<router-link :to="`/Films`">
+            	<Btn class="button" :text="'more films'"></Btn>
+			</router-link>
         </div>
-        <div>
-            <Title :text="'TV Series'"/>
+        <div class="homeSerie">
+            <Title class="homeTitle" :text="'TV Series'"/>
 			<div class="contents">
             	<ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
 			</div>
-            <Btn :text="'more series'"></Btn>
+			<router-link :to="`/Series`">
+            	<Btn class="button" :text="'more series'"></Btn>
+			</router-link>
         </div>
     </div>
 </template>
@@ -68,13 +72,28 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 	.home {
-		background-color: pink;
+		margin: 5% 15% 10% 15%;
+		display: flex;
+		flex-direction: column;
+	}
+	.homeTitle {
+		border: 3px solid red;
+		border-style:hidden hidden hidden solid;
+		padding-left: 5px; 
+	}
+	.homeFilm {
+		margin-bottom: 80px;
 	}
 	.contents{
 		display: flex;
 		justify-content: flex-start;
 		flex-wrap: wrap;
+	}
+	.button {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+		padding: 10px;
+		margin: 2% 0 0 40%;
 	}
 </style>

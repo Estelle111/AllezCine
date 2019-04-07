@@ -1,5 +1,5 @@
 <template>
-    <div id="title">{{ text }}</div>
+    <h3 id="title">{{ text }}</h3>
 </template>
 
 <script>
@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style>
+	#title {
+		font-weight: bold;
+	}
 </style>

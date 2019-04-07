@@ -6,7 +6,7 @@
     </div>
     <div class="footer fontUno">
         <div class="rowAll">
-            <h2 class="FooterH2">Les FONDAMENTAUX</h2>
+            <h2 class="FooterH2">LES FONDAMENTAUX</h2>
             <router-link to="/" class="Footermot">A propos de Allez Ciné</router-link> <br>
             <router-link to="/" class="Footermot">Contactez-nous</router-link> <br>
             <router-link to="/" class="Footermot">Forum d'aide</router-link> <br>
@@ -20,7 +20,7 @@
             <router-link to="/" class="Footermot">Facebook</router-link>
         </div>
         <div class="rowAll">
-            <h2 class="FooterH2">Legal</h2> 
+            <h2 class="FooterH2">LEGAL</h2> 
             <router-link to="/" class="Footermot">Condition d'utilisation</router-link><br>
             <router-link to="/" class="Footermot">Politique de confidentialité</router-link><br>
             <router-link to="/" class="Footermot">Descriptions</router-link><br>
@@ -46,65 +46,58 @@ components: {
 </script>
 
 <style>
-* {
-box-sizing: border-box;
-}
-
-/* Create three equal columns that floats next to each other */
-.rowAll {
-float: left;
-width: 33.33%;
-padding: 10px;
-height: 300px; /* Should be removed. Only for demonstration */
-
-}
-
-/* Clear floats after the columns */
-.footer:after {
-content: "";
-display: table;
-clear: both;
-
-}
-#footer {
-background-color: #2a2a2a;
-}
-.footer{
-background-color: #2a2a2a;
-color : white ; 
-text-decoration: none ;
-text-align: center;
-}
-
-.Footermot {
-text-decoration: none ;
-color : white ;  
-}
-.ALLEZCINE {
-display: inline;
-font-size : 50px; 
-}
-.FooterH1 {
-margin-left : 200px ; 
-}
+    * {
+        box-sizing: border-box;
+    }
+    /* Create three equal columns that floats next to each other */
+    .rowAll {
+        float: left;
+        width: 33.33%;
+        padding: 0 0 30px 70px;
+    }
+    /* Clear floats after the columns */
+    .footer:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #footer {
+        background-color: #2a2a2a;
+    }
+    .footer{
+        background-color: #2a2a2a;
+        color : white ; 
+        text-decoration: none ;
+    }
+    .Footermot {
+        text-decoration: none ;
+        color : white ;  
+        line-height: 35px;
+    }
+    .ALLEZCINE {
+        display: inline;
+        font-size: 40px; 
+    }
+    .FooterH1 {
+        padding: 45px 0 25px 70px; 
+    }
+    .FooterH2 {
+        padding-bottom: 30px; 
+    }
 
 
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
-.rowAll {
-    width: 100%;
-    height: 200px;
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 650px) {
+    .rowAll {
+        width: 100%;
+        height: 200px;
+    }
+    .FooterH1 {
+    margin-left : 20px ; 
+    }
+    .FooterH2 {
+    margin: 0px 0px 0px 0px ;
+    }
 }
-.FooterH1 {
-margin-left : 20px ; 
-}
-.FooterH2 {
-margin: 0px 0px 0px 0px ;
-}
-}
-
-/*
-background-color: rgb(9, 38, 92) ;
-*/
 </style>

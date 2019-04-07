@@ -7,9 +7,9 @@
             <Comment/>
         </div>
         <div>
-        	<Title :text="'More films'"/>
+        	<Title class="DescriptionsTitle" :text="'More films'"/>
            	<div class="contents">
-        		<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
+        		<ApiMdb v-for="(film, index) in films" :key="index" :content="film" class="descriptionsVideo"/>
 			</div>
         </div>
     </div>
@@ -44,7 +44,7 @@ export default {
 	mounted () {
 		// get film api
 		axios
-			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=2`)
 			.then(response => {
 			this.films = response.data.results.slice(0, 6)
 			console.log(this.films)
@@ -58,6 +58,20 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+	.descriptions {
+		margin: 5% 20% 10% 20%;
+		display: flex;
+		flex-direction: column;
+	}
+	.descriptionsVideo {
+		transform: scale(0.8);
+		margin-right: -20px;
+	}
+	.DescriptionsTitle {
+		border: 3px solid red;
+		border-style:hidden hidden hidden solid;
+		padding-left: 5px; 
+	}
 </style>
 
