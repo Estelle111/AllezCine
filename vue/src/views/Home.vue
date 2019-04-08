@@ -6,7 +6,7 @@
 				<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
 			</div>
 			<router-link :to="`/Films`">
-            	<Btn class="button" :text="'more films'"></Btn>
+            <Btn class="button" :text="'more films'"></Btn>
 			</router-link>
         </div>
         <div class="homeSerie">
@@ -15,7 +15,7 @@
             <ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
 			</div>
 			<router-link :to="`/Series`">
-            	<Btn class="button" :text="'more series'"></Btn>
+            <Btn class="button" :text="'more series'"></Btn>
 			</router-link>
         </div>
         <SocialNetwork/>
