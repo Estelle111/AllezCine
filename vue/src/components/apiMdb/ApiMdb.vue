@@ -27,10 +27,10 @@ export default {
   name: 'ApiMdb',
   props: ['content'],
   mounted(){
-	  this.content
+		this.content
   },
   methods:{
-	  getImage,
+		getImage,
   }
   
 

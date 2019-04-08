@@ -10,7 +10,7 @@
         <div>
             <Title :text="'TV Series'"/>
 			<div class="contents">
-            	<ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
+            <ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
 			</div>
             <Btn :text="'more series'"></Btn>
         </div>
@@ -19,8 +19,8 @@
 
 <script>
 import {axios} from '../axios'
-import Title from '../components/title/Title.vue'
 import ApiMdb from '../components/apiMdb/ApiMdb.vue'
+import Title from '../components/title/Title.vue'
 import Btn from '../components/btn/Btn.vue'
 
 export default {
@@ -71,7 +71,7 @@ export default {
 <style>
 	.home {
 		background-color: pink;
-	  }
+	}
 	.contents{
 		display: flex;
 		justify-content: flex-start;

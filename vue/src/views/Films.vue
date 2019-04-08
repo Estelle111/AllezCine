@@ -2,7 +2,7 @@
     <div class="films">
         <Title :text="'Top films'"/>
         <div class="contents">
-        	<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
+        <ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
 		</div>
         <SocialNetwork/>
     </div>

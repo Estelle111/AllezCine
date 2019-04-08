@@ -9,31 +9,46 @@
 </template>
 
 <script>
-//import des component carousel et slide du npm telechage 'carousel'
+//import des component carousel et slide du npm telechagé 'carousel'
 import { Carousel, Slide } from 'vue-carousel'
 //import du component Btn
 import Btn from '../btn/Btn.vue'
+import {axios} from '../axios'
 
 
 
 export default {
     name: 'CarouselView',
-    props: [
-
-    ],
     //data ou ; "ce qu il contient"
     data(){
         return {
+            slide: null,
+            loading: true,
+            errored: false,
             lists:['test1', 'test2', 'test3']
         }
     },
     // ses components sont; 
     components:{
         Carousel,
-        Slide,
+        slide,
         Btn,
-        
-    }
+        ApiMdb,   
+    },
+    mounted () {
+	// get film api
+	axios
+    .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+    .then(response => {
+		this.Slide = response.data.results
+		console.log(this.slide)
+    })
+    .catch(error => {
+        console.log(error)
+        this.errored = true
+    })
+    .finally(() => this.loading = false)    
+}
 }
 </script>
 
