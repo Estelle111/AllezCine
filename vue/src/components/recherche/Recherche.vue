@@ -1,8 +1,8 @@
 <template>
     <div id="recherche">
         <!--creer le mom du component input/Recherche -->
-         <input type="search" v-model="search"
-        placeholder="Recherche dans le site">
+        <input type="search" v-model="search"
+        placeholder="Recherche">
     </div>
 </template>
 
@@ -24,6 +24,9 @@ export default {
 #recherche {
     float : right ;
     margin-right: 30px ;  
+    border-radius: 10px; /* propriété CSS3 */
+    -moz-border-radius: 10px; /* compatibilité avec Firefox */
+    -webkit-border-radius: 10px; /* compatibilité avec les navigateurs Webkit */
 }
 </style>
 

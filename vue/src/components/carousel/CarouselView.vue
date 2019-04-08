@@ -44,12 +44,12 @@ export default {
 <style>
     .VueCarousel {
         width : 100%;
-        height : 350px;
+        height : 450px;
     }
     .VueCarousel-pagination[data-v-438fd353] {
         width: 100%;
         text-align: center;
-        margin-top: 245px;
+        margin-top: 375px;
         position: absolute;
     }
     .example-slide {
@@ -61,7 +61,14 @@ export default {
     }
     .imgCarousel {
         width: 100%;
-        margin-top: -120px;
+        margin-top: -80px;
+    }
+
+    @media screen and (max-width: 755px) {
+    .imgCarousel {
+        width: 100%;
+        margin-top: -20px;
+    }
     }
 </style>
 

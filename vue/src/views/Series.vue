@@ -75,6 +75,7 @@ export default {
         margin: 0 0 5% 40%;
         border: 4px solid red;
 		border-style:hidden hidden solid hidden;
-		width: 89px;
+		width: 105px;
+		text-align: center ; 
     }
 </style>

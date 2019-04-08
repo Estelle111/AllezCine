@@ -60,7 +60,27 @@ export default {
 
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 755px) {
+	.BarMot {
+		width: 100%;
+		font-size: 22px;
+		margin-left: 17px ;
+	}
+	#appBar {
+		background-color : #2a2a2a; 
+		height: 80px;
+		display: block; 
+		align-items: left; 
+	}
+	#nav {
+		float: left; 
+		margin:0px 0px 0px 0px; 
+  }
+  #recherche {
+    margin-right: 60px ;   
+}
+}
+@media screen and (max-width: 380px) {
 	.BarMot {
 		width: 100%;
 		font-size: 18px;
@@ -75,9 +95,29 @@ export default {
 	#nav {
 		float: left; 
 		margin:0px 0px 0px 0px; 
+  }
+  #recherche {
+    margin-right: 60px ;   
+}
+}
+@media screen and (max-width: 330px) {
+	.BarMot {
+		width: 100%;
+		font-size: 15px;
+		margin-left: 7px ;
 	}
-	élément {
-		margin-left: 00px;
+	#appBar {
+		background-color : #2a2a2a; 
+		height: 80px;
+		display: block; 
+    align-items: left; 
 	}
+	#nav {
+		float: left; 
+		margin:0px 0px 0px 0px; 
+  }
+  #recherche {
+    margin-right: 0px ;   
+}
 }
 </style>
