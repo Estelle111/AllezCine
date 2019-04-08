@@ -20,7 +20,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+input {
+    padding: 10px;
+    border-radius: 25px;
+}
+
 #recherche {
     float : right ;
     margin-right: 30px ;  

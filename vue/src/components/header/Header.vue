@@ -61,6 +61,7 @@ export default {
 
 
 
+
 @media screen and (max-width: 755px) {
 	.BarMot {
 		width: 100%;

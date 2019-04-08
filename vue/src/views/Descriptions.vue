@@ -1,17 +1,19 @@
 <template>
-    <div class="descriptions">
-        <SocialNetwork/>
-        <div>
-			<Detail/>
-            <Form/>
-            <Comment/>
-        </div>
-        <div>
-        	<Title class="DescriptionsTitle" :text="'More films'"/>
-           	<div class="contents">
-        		<ApiMdb v-for="(film, index) in films" :key="index" :content="film" class="descriptionsVideo"/>
+	<div id="background">
+		<div class="descriptions">
+			<SocialNetwork/>
+			<div>
+				<Detail/>
+				<Form/>
+				<Comment/>
 			</div>
-        </div>
+			<div>
+				<Title class="DescriptionsTitle" :text="'More films'"/>
+				<div class="contents">
+					<ApiMdb v-for="(film, index) in films" :key="index" :content="film" class="descriptionsVideo"/>
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 
@@ -59,19 +61,30 @@ export default {
 </script>
 
 <style scoped>
+	
+	#background{
+		background-color: #f9f9f9;
+		padding: 1px;
+
+	}
 	.descriptions {
 		margin: 5% 20% 10% 20%;
 		display: flex;
 		flex-direction: column;
+	
 	}
 	.descriptionsVideo {
 		transform: scale(0.8);
 		margin-right: -20px;
+
 	}
 	.DescriptionsTitle {
 		border: 3px solid red;
 		border-style:hidden hidden hidden solid;
 		padding-left: 5px; 
 	}
+
+    
+
 </style>
 

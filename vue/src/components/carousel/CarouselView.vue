@@ -28,7 +28,7 @@ export default {
     // ses components sont; 
     components:{
         Carousel,
-        slide,
+        Slide,
         Btn,
     },
     //data ou ; "ce qu il contient"
