@@ -1,16 +1,18 @@
 <template>
-    <div id="title">{{ text }}</div>
+    <h3 id="title">{{ text }}</h3>
 </template>
 
 <script>
 
 
 export default {
-  name: 'Title',
-  props: ['text'],
-  
+	name: 'Title',
+	props: ['text'],
 }
 </script>
 
 <style>
+	#title {
+		font-weight: bold;
+	}
 </style>

@@ -1,72 +1,74 @@
 <template>
-    <Carousel :per-page="1" :mouse-drag="true">
-        <Slide v-for="(slide, index) in lists" :key="index">
-            Slide {{ slide }} Content
-            <br/>
+    <Carousel :per-page="1"  :mouse-drag="true">
+        <Slide>
+            <img class="imgCarousel" :src="'https://image.tmdb.org/t/p/original/aQXTw3wIWuFMy0beXRiZ1xVKtcf.jpg'" alt="video poster">
+            <Btn :text="'GO TO THE FILM'" />
+        </Slide>
+        <Slide>
+            <img class="imgCarousel" :src="'https://image.tmdb.org/t/p/original/wtZj5nn6hVwgakPdg6y6gm3eFXU.jpg'" alt="video poster">
+            <Btn :text="'GO TO THE FILM'" />
+        </Slide>
+        <Slide>
+            <img class="imgCarousel" :src="'https://image.tmdb.org/t/p/original/6Q0tvlUJ32vxfbyuyEEm2OyDMeA.jpg'" alt="video poster">
             <Btn :text="'GO TO THE FILM'" />
         </Slide>
     </Carousel> 
 </template>
 
 <script>
-//import des component carousel et slide du npm telechagé 'carousel'
+//import des component carousel et slide du npm telechargé 'carousel'
 import { Carousel, Slide } from 'vue-carousel'
 //import du component Btn
 import Btn from '../btn/Btn.vue'
-import {axios} from '../axios'
-
-
+import {axios} from '../../axios'
+import {getImage} from '../../getImage'
 
 export default {
     name: 'CarouselView',
-    //data ou ; "ce qu il contient"
-    data(){
-        return {
-            slide: null,
-            loading: true,
-            errored: false,
-            lists:['test1', 'test2', 'test3']
-        }
-    },
     // ses components sont; 
     components:{
         Carousel,
         slide,
         Btn,
-        ApiMdb,   
     },
-    mounted () {
-	// get film api
-	axios
-    .get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-    .then(response => {
-		this.Slide = response.data.results
-		console.log(this.slide)
-    })
-    .catch(error => {
-        console.log(error)
-        this.errored = true
-    })
-    .finally(() => this.loading = false)    
-}
+    //data ou ; "ce qu il contient"
+    data(){
+        return {
+            lists:['test1', 'test2', 'test3'],
+        }
+    },
+	
 }
 </script>
 
 <style>
-.VueCarousel {
-    background-color: green;
-    width : 95%;
-    margin-left : auto ; 
-    margin-right : auto ; 
-    height : 300px;
+    .VueCarousel {
+        width : 100%;
+        height : 450px;
+    }
+    .VueCarousel-pagination[data-v-438fd353] {
+        width: 100%;
+        text-align: center;
+        margin-top: 375px;
+        position: absolute;
+    }
+    .example-slide {
+        align-items: center;
+        display: flex;
+        font-size: 1.5rem;
+        justify-content: center;
+        min-height: 10rem;
+    }
+    .imgCarousel {
+        width: 100%;
+        margin-top: -80px;
+    }
 
-}
-.example-slide {
-    align-items: center;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: center;
-    min-height: 10rem;
-}
+    @media screen and (max-width: 755px) {
+    .imgCarousel {
+        width: 100%;
+        margin-top: -20px;
+    }
+    }
 </style>
 
