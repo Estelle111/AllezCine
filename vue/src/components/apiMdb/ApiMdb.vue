@@ -60,5 +60,8 @@ export default {
         text-align: center;
         max-width: 130px ; 
         padding: 10px ; 
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 </style>        

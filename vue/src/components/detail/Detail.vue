@@ -58,7 +58,7 @@ export default {
 		console.log(this.$router.history.current.params.id)
 		console.log(this.$router.history.current.params.type)
 		axios
-			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
+			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=fr`)
 			.then(response => {
 			this.detail = response.data
 			console.log(this.detail)
@@ -70,7 +70,7 @@ export default {
 			.finally(() => this.loading = false) 
 		
 		axios
-			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
+			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=fr`)
 			.then(response => {
 			this.genres = response.data.genres
 			console.log(this.genres)
