@@ -58,7 +58,7 @@ export default {
 		console.log(this.$router.history.current.params.id)
 		console.log(this.$router.history.current.params.type)
 		axios
-			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
+			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=fr`)
 			.then(response => {
 			this.detail = response.data
 			console.log(this.detail)
@@ -70,7 +70,7 @@ export default {
 			.finally(() => this.loading = false) 
 		
 		axios
-			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
+			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=fr`)
 			.then(response => {
 			this.genres = response.data.genres
 			console.log(this.genres)
@@ -84,7 +84,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+	*{
+		border-radius: 5px;
+	}
 	.details {
 		display: flex;
 		justify-content: space-between;
@@ -114,6 +117,7 @@ export default {
 		flex-wrap: wrap;
     }
     .genre {
+		font-size: 0.7em;
         background-color: white;
         margin: 0 10px 10px 0;
         padding: 6px;
@@ -123,4 +127,7 @@ export default {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
         /* box-shadow: 0px 8px 6px grey; */
     }
+	span.genre{
+		font-size: 0.8 em;
+	}
 </style>

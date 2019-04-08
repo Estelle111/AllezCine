@@ -35,6 +35,7 @@ export default {
         color: #a6a6a6;
     }
     form {
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         background-color: white;
@@ -46,6 +47,7 @@ export default {
         padding: 5px 0 0 10px;
         font-weight: bold;
         font-size: 14px;
+        border-radius: 5px;
     }
     .inputTitle {
         height: 50px;
