@@ -88,10 +88,12 @@ components: {
 
 
     /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 840px) {
     .rowAll {
         width: 100%;
         height: 200px;
+        margin-top: 100px;
+        text-align: center ; 
     }
     .FooterH1 {
     margin-left : 20px ; 
@@ -99,5 +101,22 @@ components: {
     .FooterH2 {
     margin: 0px 0px 0px 0px ;
     }
+}
+    @media screen and (max-width: 840px) {
+    .rowAll {
+        width: 100%;
+        height: 200px;
+        margin-top: 100px;
+        text-align: center ; 
+    }
+    .FooterH1 {
+    margin-left : 5px ; 
+    }
+    .FooterH2 {
+    margin: 0px 0px 0px 0px ;
+    }
+        .ALLEZCINE {
+        font-size: 25px; 
+}
 }
 </style>
