@@ -115,9 +115,9 @@ export default {
     }
     .genre {
         background-color: white;
-        margin-right: 10px;
+        margin: 0 10px 10px 0;
         padding: 6px;
-        height: 35px;
+        height: auto;
         width: 115px;
         text-align: center;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
