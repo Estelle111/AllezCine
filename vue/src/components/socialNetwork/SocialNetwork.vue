@@ -22,7 +22,7 @@ export default {
 <style scoped>
     .socialF {
     position : fixed ; 
-    top : 75% ; 
+    top : 500px ; 
     left: -165px ; 
     width :200px ; 
     background-color :#4267b2 ; 
@@ -35,7 +35,7 @@ export default {
 
     .socialF:hover {
     position : fixed ; 
-    top : 75% ; 
+    top : 500px ; 
     left: -125px ; 
     width :200px ; 
     background-color :#4267b2 ; 
@@ -53,7 +53,7 @@ export default {
     }
     .socialT {
     position : fixed ; 
-    top : 83% ; 
+    top : 550px ; 
     left: -170px ; 
     width :200px ; 
     background-color :#38A1F3 ; 
@@ -65,7 +65,7 @@ export default {
 
     .socialT:hover {
     position : fixed ; 
-    top : 83% ; 
+    top : 550px ; 
     left: -125px ; 
     width :200px ; 
     background-color :#38A1F3 ; 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="public/assets/like.svg">
+        <i class=" far fa-thumbs-up"></i>
     </div>
 </template>
 
@@ -11,4 +11,5 @@ export default {
 </script>
 
 <style>
+
 </style>
