@@ -25,7 +25,7 @@ export default new Router({
       name: 'Films',
       component : Films
     },
-    {
+    {  
       path: '/Series',
       name: 'Series',
       component : Series

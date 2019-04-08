@@ -6,16 +6,16 @@
 				<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
 			</div>
 			<router-link :to="`/Films`">
-            	<Btn class="button" :text="'more films'"></Btn>
+            <Btn class="button" :text="'more films'"></Btn>
 			</router-link>
         </div>
         <div class="homeSerie">
             <Title class="homeTitle" :text="'TV Series'"/>
 			<div class="contents">
-            	<ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
+            <ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
 			</div>
 			<router-link :to="`/Series`">
-            	<Btn class="button" :text="'more series'"></Btn>
+            <Btn class="button" :text="'more series'"></Btn>
 			</router-link>
         </div>
         <SocialNetwork/>
@@ -24,8 +24,8 @@
 
 <script>
 import {axios} from '../axios'
-import Title from '../components/title/Title.vue'
 import ApiMdb from '../components/apiMdb/ApiMdb.vue'
+import Title from '../components/title/Title.vue'
 import Btn from '../components/btn/Btn.vue'
 import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
