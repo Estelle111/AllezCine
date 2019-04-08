@@ -1,22 +1,26 @@
 <template>
-	<span>
-		<i v-for="(icone, index) in icones" :key="index" class="far fa-star">
-			<i class="fas fa-star">
-				<!-- {{getStars(votes)}}  -->
-			</i>
-		</i>
+	<span class="starsDisplay">
+		<i class="fas fa-star" v-if="(Math.round(vote) > 0)"></i>
+		<i class="far fa-star" v-else></i>
+		<i class="fas fa-star" v-if="(Math.round(vote) >= 4)"></i>
+		<i class="far fa-star" v-else></i>
+		<i class="fas fa-star" v-if="(Math.round(vote) >= 6)"></i>
+		<i class="far fa-star" v-else></i>
+		<i class="fas fa-star" v-if="(Math.round(vote) >= 8)"></i>
+		<i class="far fa-star" v-else></i>
+		<i class="fas fa-star" v-if="(Math.round(vote) >= 10)"></i>
+		<i class="far fa-star" v-else></i>
 	</span>
 </template>
 
 <script>
 import {axios} from '../../axios'
-/* import {getStars} from '../../getStars' */
 
 export default {
 	name: 'Stars',
 	data () {
 		return {
-			votes: null,
+			vote: null,
 			numberOfStars: null,
 			loading: true,
 			errored: false,
@@ -31,8 +35,8 @@ export default {
 		axios
 			.get(`https://api.themoviedb.org/3/${this.$router.history.current.params.type}/${this.$router.history.current.params.id}?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&language=en-US`)
 			.then(response => {
-			this.votes = response.data.vote_average
-			console.log(this.votes)
+			this.vote = response.data.vote_average
+			console.log(this.vote)
 			})
 			.catch(error => {
 			console.log(error)
@@ -40,36 +44,14 @@ export default {
 			})
 			.finally(() => this.loading = false) 
 	},
-	methods: {
-		/* getStars */
-		/* getStars: function(path) {
-			let numberOfStars = null;
-			let stars = ' ';
-			this.numberOfStars = Math.round(this.votes/2);
-				for(var index = 0; index < numberOfStars; index++)
-        			stars += '<i class="far fa-star"/>';
-		} */
-		
-	}
 }
 </script>
 
 <style>
-	i.far {
-		display: inline-block;
-		position: relative;
+	.starsDisplay {
+		display: flex;
 	}
-	
-	i.fas {
-		position: absolute;
-		top: 0;
-		left: 0;
-		white-space: nowrap;
-		overflow: hidden;
-		width: 0;
-	}
-	
-	i.fas::before {
+	.fa-star {
 		color: #f8ce0b;
 	}
 </style>
