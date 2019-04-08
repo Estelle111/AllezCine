@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style:scoped>
 #recherche {
     float : right ;
     margin-right: 30px ;  

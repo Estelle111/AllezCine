@@ -57,6 +57,7 @@ export default {
 	color: white; 
   text-decoration: none;
   white-space: nowrap;
+  transition : 1s;
 }
 
 
@@ -65,7 +66,8 @@ export default {
 	.BarMot {
 		width: 100%;
 		font-size: 22px;
-		margin-left: 17px ;
+    margin-left: 17px ;
+    transition : 1s;
 	}
 	#appBar {
 		background-color : #2a2a2a; 

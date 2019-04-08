@@ -29,7 +29,7 @@ export default {
     transition : 1s; 
     color : white ; 
     height: 75px ;
-    border-radius: 25% ; 
+    border-radius: 50px ; 
 
     }
 
@@ -41,7 +41,7 @@ export default {
     background-color :#4267b2 ; 
     transition : 1s; 
     height: 75px ;
-    border-radius: 25% ; 
+    border-radius: 50px ; 
     }
 
     .fab {
@@ -60,7 +60,7 @@ export default {
     transition : 1s; 
     color : white ; 
     height: 75px ;
-    border-radius: 25% ; 
+    border-radius: 50px ; 
     }
 
     .socialT:hover {
@@ -71,9 +71,40 @@ export default {
     background-color :#38A1F3 ; 
     transition : 1s; 
     height: 75px ;
-    border-radius: 25% ; 
+    border-radius: 50px ; 
     }
 
+@media screen and (max-height: 800px) {
+.socialF { 
+    top : 300px ; 
+    }
+    .socialF:hover {
+    top : 300px ; 
+    }
+    .socialT {
+    top : 350px ; 
+    }
 
+    .socialT:hover { 
+    top : 350px ; 
+    }
+}
+@media screen and (max-height: 400px) {
+.socialF {
+    top : 100px ; 
 
+    }
+
+    .socialF:hover {
+    top : 100px ; 
+    }
+
+    .socialT {
+    top : 150px ; 
+    }
+
+    .socialT:hover {
+    top : 150px ; 
+}
+}
 </style>

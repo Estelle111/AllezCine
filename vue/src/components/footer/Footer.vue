@@ -95,6 +95,7 @@ components: {
         height: 200px;
         margin-top: 100px;
         text-align: center ; 
+        transition : 1s;
     }
     .FooterH1 {
     margin-left : 20px ; 
@@ -116,7 +117,7 @@ components: {
     .FooterH2 {
     margin: 0px 0px 0px 0px ;
     }
-        .ALLEZCINE {
+    .ALLEZCINE {
         font-size: 25px; 
 }
 }
