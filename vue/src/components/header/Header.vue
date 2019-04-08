@@ -1,20 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div id="header">
-    <div id="appBar">
-      <div id="nav" class="fontUno" >
-        <!-- liens comme <a></a> pour rediriger sur la bonne page. via le router -->
-        <router-link to="/" class="BarMot colored">HOME</router-link> 
-        <router-link to="/Films" class="BarMot">Films</router-link>
-        <router-link to="/Series" class="BarMot">Series</router-link>
-      </div>
-      <Recherche/>
-    </div>
-    <div id="headeroussel">
-        <CarouselView/>
-    </div> 
-  </div>
-=======
 	<div id="header">
 		<div id="appBar">
 			<div id="nav" class="fontUno" >
@@ -29,7 +13,6 @@
 			<CarouselView/>
 		</div> 
 	</div>
->>>>>>> 908d0331553f39a8280da9b81e8af63772a20a56
 </template>
 
 <script>
