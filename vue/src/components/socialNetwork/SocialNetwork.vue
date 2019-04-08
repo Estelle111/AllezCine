@@ -22,25 +22,25 @@ export default {
 <style scoped>
     .socialF {
     position : fixed ; 
-    top : 600px ; 
+    top : 75% ; 
     left: -165px ; 
     width :200px ; 
     background-color :#4267b2 ; 
     transition : 1s; 
     color : white ; 
-    height: 50px ;
+    height: 75px ;
     border-radius: 25% ; 
 
     }
 
     .socialF:hover {
     position : fixed ; 
-    top : 600px ; 
+    top : 75% ; 
     left: -125px ; 
     width :200px ; 
     background-color :#4267b2 ; 
     transition : 1s; 
-    height: 50px ;
+    height: 75px ;
     border-radius: 25% ; 
     }
 
@@ -48,28 +48,29 @@ export default {
         color :white ; 
         float : right;
         margin-right: 5%;
-        margin-top: 8%;
+        margin-top: 13%;
+        font-weight: 50px;
     }
     .socialT {
     position : fixed ; 
-    top : 660px ; 
+    top : 83% ; 
     left: -170px ; 
     width :200px ; 
     background-color :#38A1F3 ; 
     transition : 1s; 
     color : white ; 
-    height: 50px ;
+    height: 75px ;
     border-radius: 25% ; 
     }
 
     .socialT:hover {
     position : fixed ; 
-    top : 660px ; 
+    top : 83% ; 
     left: -125px ; 
     width :200px ; 
     background-color :#38A1F3 ; 
     transition : 1s; 
-    height: 50px ;
+    height: 75px ;
     border-radius: 25% ; 
     }
 

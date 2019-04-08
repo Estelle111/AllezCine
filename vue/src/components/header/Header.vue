@@ -55,7 +55,8 @@ export default {
 .BarMot {
 	margin-left: 50px; 
 	color: white; 
-	text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 

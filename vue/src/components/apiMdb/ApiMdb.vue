@@ -58,5 +58,7 @@ export default {
     }
     .videoTitle {
         text-align: center;
+        max-width: 130px ; 
+        padding: 10px ; 
     }
 </style>        

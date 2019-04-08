@@ -54,6 +54,7 @@ components: {
         float: left;
         width: 33.33%;
         padding: 0 0 30px 70px;
+        white-space: nowrap;
     }
     /* Clear floats after the columns */
     .footer:after {

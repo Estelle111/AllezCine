@@ -18,6 +18,7 @@
             	<Btn class="button" :text="'more series'"></Btn>
 			</router-link>
         </div>
+        <SocialNetwork/>
     </div>
 </template>
 
@@ -26,13 +27,15 @@ import {axios} from '../axios'
 import Title from '../components/title/Title.vue'
 import ApiMdb from '../components/apiMdb/ApiMdb.vue'
 import Btn from '../components/btn/Btn.vue'
+import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
 export default {
 	name : 'Home',
 	components:{
 		Title,
 		ApiMdb,
-		Btn
+    Btn,
+    SocialNetwork,
 	},
 	data () {
 		return {
