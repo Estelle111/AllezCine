@@ -50,14 +50,14 @@ export default {
 #headeroussel {
 	color: blue ;
 	text-align: center;
-  
+	
 }
 .BarMot {
 	margin-left: 50px; 
 	color: white; 
-  text-decoration: none;
-  white-space: nowrap;
-  transition : 1s;
+	text-decoration: none;
+	white-space: nowrap;
+	transition : 1s;
 }
 
 
@@ -67,8 +67,8 @@ export default {
 	.BarMot {
 		width: 100%;
 		font-size: 22px;
-    margin-left: 17px ;
-    transition : 1s;
+		margin-left: 17px ;
+		transition : 1s;
 	}
 	#appBar {
 		background-color : #2a2a2a; 
@@ -79,9 +79,9 @@ export default {
 	#nav {
 		float: left; 
 		margin:0px 0px 0px 0px; 
-  }
-  #recherche {
-    margin-right: 60px ;   
+	}
+	#recherche {
+		margin-right: 60px ;   
 }
 }
 @media screen and (max-width: 380px) {
@@ -99,9 +99,9 @@ export default {
 	#nav {
 		float: left; 
 		margin:0px 0px 0px 0px; 
-  }
-  #recherche {
-    margin-right: 60px ;   
+	}
+	#recherche {
+		margin-right: 60px ;   
 }
 }
 @media screen and (max-width: 330px) {
@@ -114,14 +114,14 @@ export default {
 		background-color : #2a2a2a; 
 		height: 80px;
 		display: block; 
-    align-items: left; 
+		align-items: left; 
 	}
 	#nav {
 		float: left; 
 		margin:0px 0px 0px 0px; 
-  }
-  #recherche {
-    margin-right: 0px ;   
+	}
+	#recherche {
+		margin-right: 0px ;   
 }
 }
 </style>

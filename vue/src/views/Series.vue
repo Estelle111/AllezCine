@@ -2,8 +2,10 @@
     <div class="series">
         <Title class="SeriesTitle" :text="'Top series'"/>
         <div class="contents">
-            <ApiMdb v-for="(serie1, index) in tv1" :key="index" :content="serie1"/>
-            <ApiMdb v-for="(serie2, index) in tv2" :key="index" :content="serie2"/>
+            <ApiMdb v-for="(serie, index) in series" :key="index" :content="serie"/>
+        </div>
+        <div @click="addData">
+            <Btn class="button seriesBtn" :text="'more series'"></Btn>
         </div>
         <SocialNetwork/>
     </div>
@@ -13,6 +15,7 @@
 import {axios} from '../axios'
 import Title from '../components/title/Title'
 import ApiMdb from '../components/apiMdb/ApiMdb'
+import Btn from '../components/btn/Btn'
 import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
 export default {
@@ -20,41 +23,50 @@ export default {
     components:{
         Title,
         ApiMdb,
+        Btn,
         SocialNetwork,
     },
     data () {
         return {
-            tv1: null,
-            tv2: null,
+            series: [],
             loading: true,
-            errored: false
+            errored: false,
+            page: 2,
         }
     },
-    mounted () {   
-        // get series api
-        axios
-            .get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
-            .then(response => {
-                this.tv1 = response.data.results
-                console.log(this.tv1)
-            })
-            .catch(error => {
-                console.log(error)
-                this.errored = true
-            })
-            .finally(() => this.loading = false)
-
-        axios
-            .get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=2`)
-            .then(response => {
-                this.tv2 = response.data.results
-                console.log(this.tv2)
-            })
-            .catch(error => {
-                console.log(error)
-                this.errored = true
-            })
-            .finally(() => this.loading = false)
+    methods: {
+        getData(page){
+            // get series api
+            axios
+                .get(`https://api.themoviedb.org/3/discover/tv?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=${page}`)
+                .then(response => {
+                    this.series.push(...response.data.results)
+                    console.log(this.series)
+                })
+                .catch(error => {
+                    console.log(error)
+                    this.errored = true
+                })
+                .finally(() => this.loading = false)
+        },
+        addData(){
+            console.log(this.page)
+            this.page ++
+            this.getData(this.page)
+        },
+        checkScroll(){
+            if(window.scrollY / (document.body.offsetHeight - screen.height) * 100 > 95){
+                this.addData()
+            }
+        }
+    },
+    mounted() {   
+        this.getData(1);
+        this.getData(2);
+        window.addEventListener('scroll', this.checkScroll)
+    },
+    destroyed(){
+        window.removeEventListener('scroll', this.checkScroll)
     }
 }
 
@@ -78,4 +90,9 @@ export default {
 		width: 105px;
 		text-align: center ; 
     }
+    .seriesBtn {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+		padding: 10px;
+		margin: 2% 0 0 40%;
+	}
 </style>

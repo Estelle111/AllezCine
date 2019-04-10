@@ -12,7 +12,7 @@
         <div class="homeSerie">
             <Title class="homeTitle" :text="'TV Series'"/>
 			<div class="contents">
-            <ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
+            	<ApiMdb v-for="(serie, index) in tv" :key="index" :content="serie"/>
 			</div>
 			<router-link :to="`/Series`">
             <Btn class="button" :text="'more series'"></Btn>

@@ -2,8 +2,10 @@
     <div class="films">
         <Title class="FilmsTitle" :text="'Top films'"/>
         <div class="contents">
-        	<ApiMdb v-for="(film1, index) in films1" :key="index" :content="film1"/>
-        	<ApiMdb v-for="(film2, index) in films2" :key="index" :content="film2"/>
+        	<ApiMdb v-for="(film, index) in films" :key="index" :content="film"/>
+		</div>
+		<div @click="addData">
+			<Btn class="button filmsBtn" :text="'more films'"></Btn>
 		</div>
         <SocialNetwork/>
     </div>
@@ -13,6 +15,7 @@
 import {axios} from '../axios'
 import Title from '../components/title/Title'
 import ApiMdb from '../components/apiMdb/ApiMdb'
+import Btn from '../components/btn/Btn'
 import SocialNetwork from '../components/socialNetwork/SocialNetwork'
 
 
@@ -21,41 +24,50 @@ export default {
 	components:{
 		Title,
 		ApiMdb,
+		Btn,
 		SocialNetwork,
 	},
 	data () {
 		return {
-			films1: null,
-			films2: null,
+			films: [],
 			loading: true,
-			errored: false
+			errored: false,
+			page: 2,
 		}
 	},
-	mounted () {
-	// get film api
-		axios
-			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=1`)
+	methods: {
+		getData(page){
+			axios
+			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=${page}`)
 			.then(response => {
-			this.films1 = response.data.results
-			console.log(this.films1)
+				this.films.push(...response.data.results)
+				console.log(this.films)
 			})
 			.catch(error => {
-			console.log(error)
-			this.errored = true
+				console.log(error)
+				this.errored = true
 			})
 			.finally(() => this.loading = false)    
-		
-		axios
-			.get(`https://api.themoviedb.org/3/discover/movie?api_key=7ca673fff2a5fb82abd38a9a0d559c4e&page=2`)
-			.then(response => {
-			this.films2 = response.data.results
-			console.log(this.films2)
-			})
-			.catch(error => {
-			console.log(error)
-			this.errored = true
-			})
-			.finally(() => this.loading = false) 
+		},
+		addData(){
+			console.log(this.page)
+			this.page ++
+			this.getData(this.page)
+		},
+		checkScroll(){
+			if(window.scrollY / (document.body.offsetHeight - screen.height) * 100 > 95){
+				this.addData()
+			}
+		}
+	},
+	mounted(){
+	// get film api		
+		this.getData(1);
+		this.getData(2);
+		window.addEventListener('scroll', this.checkScroll)
+	},
+	destroyed(){
+		window.removeEventListener('scroll', this.checkScroll)
 	}
 }
 </script>
@@ -77,5 +89,10 @@ export default {
 		border-style:hidden hidden solid hidden;
 		width: 105px;
 		text-align: center ; 
+	}
+	.filmsBtn {
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.19);
+		padding: 10px;
+		margin: 2% 0 0 40%;
 	}
 </style>
