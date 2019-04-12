@@ -1,6 +1,5 @@
 # AllezCine
-
-Work in progress/ not finished
+**After 3 months and 5 days of training**
 
 AllezCine is a teamwork project application based on Vue.js developed within the BeCode training.
 
@@ -19,9 +18,9 @@ AllezCine is a teamwork project application based on Vue.js developed within the
 ## Acknowledgments
 
 * Agile
-* .Vue
-* .Axios
-* .PHP
+* Vue
+* Axios
+* PHP
 * MySql Database
 
 ## Skills
