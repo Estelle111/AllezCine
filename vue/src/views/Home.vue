@@ -34,8 +34,8 @@ export default {
 	components:{
 		Title,
 		ApiMdb,
-    Btn,
-    SocialNetwork,
+		Btn,
+		SocialNetwork,
 	},
 	data () {
 		return {

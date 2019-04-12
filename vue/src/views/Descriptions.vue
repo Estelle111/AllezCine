@@ -4,8 +4,8 @@
 			<SocialNetwork/>
 			<div>
 				<Detail/>
-				<Form/>
-				<Comment/>
+				<Form :key="formKey" :forceRerender="forceRerender"/>
+				<Comment :key="commentKey" :forceRerender="forceRerender"/>
 			</div>
 			<div>
 				<Title class="DescriptionsTitle" :text="'More films'"/>
@@ -40,9 +40,17 @@ export default {
 		return {
 			films: null,
 			loading: true,
-			errored: false
+			errored: false,
+			commentKey: 0,
+			formKey: 0,
 		}
-  	},
+	},
+	methods: {
+		forceRerender(){
+                this.commentKey ++
+                this.formKey ++
+        },
+	},
 	mounted () {
 		// get film api
 		axios
